@@ -1,0 +1,14 @@
+version: '3'
+services:
+  httpd:
+    container_name: DorkisWebServer
+    image: httpd-dorkis:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - F:\container\apache2\extra:/usr/local/apache2/conf/extra
+    networks:
+      - "dorkis_net"
+networks:
+  dorkis_net:
